@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Open source A Quick Product Landing Page by Sohail Sarwar, www.mrsohail.one" />
+  <meta name="keywords" content="landing page, product page, css, html, dark mode, css theme, css template, web template" />
+
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Landing Page">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Landing Page">
+  <meta name="supported-color-schemes" content="light dark">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#222">
+
+  <!-- Page Title -->
+  <title>Web Toolkit - Github Profile Checker, Password Generator and Checker</title>
+
+  <!-- CSS Style File -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="page-container">
+    <!-- Navigation -->
+    <nav>
+      <div class="branding">
+        <h1><a href="#">Toolkit</a></h1>
+      </div>
+      <ul class="main-nav">
+        <li><a class="link" href="#projects">Brief</a></li>
+        <li><a class="link" href="#anish">Why This Project?</a></li>
+        <li><a class="link" href="#feature">Project List</a></li>
+      </ul>
+      <ul class="social-icon">
+        <li><a href="https://github.com/daxoron"><img src="img/github.svg" alt=""> </a></li>
+        <li><a href="https://twitter.com/daxoron"><img src="img/twitter.svg" alt=""> </a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Hero heading Subscription form and Image -->
+      <div class="hero" id="projects">
+        <h2>The Toolkit You Need</h2>
+        <p class="version"><span>Check Your Peers Github Account.</span><br><br><span>Generate a Strong Password for Yourself.</span><br><br><span>Check How Strong is Your Password in a Interactive Manner.</span></p>
+        <div class="hero-banner" id="anish">
+          <img src="img/giff.gif" alt="">
+          <br><br><br>
+          <p class="into-video"><a class="link" href="#feature">Having a Strong Password Necessary, Check Why ?</a></p>
+        </div>
+        
+      </div>
+      
+      <!-- Hero heading Subscription form and Image -->
+      <div class="hero sub-hero" id="feature">
+        <h3>The Toolkit</h3>
+      </div>
+
+      <div class="top-feature">
+        <div class="f-info">
+          <h4>Password Generator</h4>
+          <p>Generate Strong and Safe Passwords with a Single Click. Its Safe to use Our Password Generator as We Dont Save Passwords.</p>
+          <a href=".\MiniProjects\password-generator\index.html" class="learn-more link">Click Here</a>
+        </div>
+        <div class="f-banner">
+          <img src="img/feature-img.png" alt="">
+        </div>
+      </div>
+      <div class="top-feature">
+        <div class="f-info">
+          <h4>Github Profile Checker</h4>
+          <p>Check Your Peers Github Profile and Checkout Their Commits and Repositories in a Quick And Easy Process, just by Entering The Github Username.</p>
+          <a href=".\MiniProjects\github-profiles\index.html" class="learn-more link">Click Here</a>
+        </div>
+        <div class="f-banner">
+          <img src="img/feature-img1.png" alt="">
+        </div>
+      </div>
+      <div class="top-feature">
+        <div class="f-info">
+          <h4>Password Strength Checker</h4>
+          <p>Check the Strength of Your Password and Know if your Password is safe to use, in Online and in Offline Security. Password Checker Checks the Strength of password agaisnt brute force attacks.</p>
+          <a href=".\MiniProjects\password-strength-background\index.html" class="learn-more link">Click Here</a>
+        </div>
+        <div class="f-banner">
+          <img src="img/feature-img2.png" alt="">
+        </div>
+      </div>
+      
+    </main>
+  </div>
+
+  <!-- Page Footer Section -->
+  <footer>
+    <div class="footer-link">
+      <ul>
+        <li><a class="link" href="">Press Kit</a></li>
+        <li><a class="link" href="">Download</a></li>
+        <li><a class="link" href="">Privacy & Terms</a></li>
+        <li><a class="link" href="mailto:hello@email.com">Get in touch</a></li>
+      </ul>
+      <p class="copyright-text">Copyright © 0000.</p>
+
+      <div class="theme-switcher">
+        <p class="[ toggle-button ] [ js-mode-toggle ]"><a class="[ toggle-button__text ]" href="javascript:void(0);"
+            title="Switch Color Theme"><img src="img/toggle.svg" alt=""></a></p>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- Javascript for theme Switcher  -->
+  <script>
+    document.documentElement.classList.remove("no-js");const STORAGE_KEY="user-color-scheme",COLOR_MODE_KEY="--color-mode",modeToggleButton=document.querySelector(".js-mode-toggle"),modeToggleText=document.querySelector(".js-mode-toggle-text"),modeStatusElement=document.querySelector(".js-mode-status"),getCSSCustomProp=e=>{let t=getComputedStyle(document.documentElement).getPropertyValue(e);return t.length&&(t=t.replace(/\'|"/g,"").trim()),t},applySetting=e=>{let t=e||localStorage.getItem(STORAGE_KEY);t?(document.documentElement.setAttribute("data-user-color-scheme",t),setButtonLabelAndStatus(t)):setButtonLabelAndStatus(getCSSCustomProp("--color-mode"))},toggleSetting=()=>{let e=localStorage.getItem(STORAGE_KEY);switch(e){case null:e="dark"===getCSSCustomProp("--color-mode")?"light":"dark";break;case"light":e="dark";break;case"dark":e="light"}return localStorage.setItem(STORAGE_KEY,e),e},setButtonLabelAndStatus=e=>{modeToggleText.innerText=`Enable ${"dark"===e?"light":"dark"} Mode`,modeStatusElement.innerText=`Current color mode is "${e}"`};modeToggleButton.addEventListener("click",e=>{e.preventDefault(),applySetting(toggleSetting())}),applySetting();
+  </script>
+
+
+  <!-- Desing & Develped by 'Sohail Sarwar' for Open Source (www.mrsohail.one | @sohailsarwar101)  -->
+</body>
+
+</html>
